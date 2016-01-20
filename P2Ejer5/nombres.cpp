@@ -23,7 +23,7 @@ void main(void)
 		// +1 porque hay que guardar '\0'
 		pnombres[i] = new char[strlen(tmp) + 1];
 		// debe copiar las letras de tmp a la matriz pnombres
-		strcpy(pnombres[i], tmp);
+		strcpy(pnombres[i], tmp); //obsoleto
 		//strcpy_s(pnombres[i], tmp);
 	}
 
