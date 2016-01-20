@@ -8,9 +8,19 @@ using namespace std;
 
 void main(void)
 {
-	char tmp[120], *temp;
+	char tmp[120], *temp, opcion = '0';
 	char** pnombres;
 	int Num;
+
+	while(opcion != '1' && opcion!= '2') {
+		cout << "Como desea ordenar los nombres:" << endl;
+		cout << "Ascendente -> 1" << endl;
+		cout << "Descendente -> 2" << endl;
+		cout << "Opcion:";
+		cin >> opcion;
+	}
+
+	
 	cout << "Cuantos Nombres desea ordenar:";
 	cin >> Num;
 	cin.ignore();
@@ -28,15 +38,30 @@ void main(void)
 	}
 
 	//algoritmo de ordenación
-	for (int i = 0; i<Num - 1; i++) {
-		for (int j = i + 1; j<Num; j++) {
-			if (strcmp(pnombres[i], pnombres[j]) > 0) {
-				temp = pnombres[i];
-				pnombres[i] = pnombres[j];
-				pnombres[j] = temp;
+
+	if (opcion == '1') {
+		for (int i = 0; i<Num - 1; i++) {
+			for (int j = i + 1; j<Num; j++) {
+				if (strcmp(pnombres[i], pnombres[j]) > 0) {
+					temp = pnombres[i];
+					pnombres[i] = pnombres[j];
+					pnombres[j] = temp;
+				}
 			}
 		}
 	}
+	else {
+		for (int i = 0; i<Num - 1; i++) {
+			for (int j = i + 1; j<Num; j++) {
+				if (strcmp(pnombres[i], pnombres[j]) < 0) {
+					temp = pnombres[i];
+					pnombres[i] = pnombres[j];
+					pnombres[j] = temp;
+				}
+			}
+		}
+	}
+	
 
 	//sacar datos por consola
 	for (int f = 0; f < Num; f++) {
