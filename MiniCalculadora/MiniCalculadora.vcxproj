@@ -22,6 +22,7 @@
     <ProjectGuid>{7CEBCCD3-5405-41DD-AC8B-8F8C4A009570}</ProjectGuid>
     <RootNamespace>MiniCalculadora</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>P1Ejer5</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
