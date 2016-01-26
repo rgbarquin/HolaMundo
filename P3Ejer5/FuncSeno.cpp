@@ -63,16 +63,17 @@ int Menu()
 
 double Seno(double x, int N) {
 	
-	double ans = 0;
+	double ans = 0, term;
+	term = x;
 	int fact = 1;
-	bool flag = true;
+	//bool flag = true;
 
 	//x = x - (2 * N * M_PI);
 
 
 	for (int i = 0; i < N; i++) {
 
-		if (flag) {
+		/*if (flag) {
 			ans = ans + (pow(x, fact) / factorial(fact));			
 		}
 		else{
@@ -80,7 +81,12 @@ double Seno(double x, int N) {
 		}
 
 		flag = !flag;
+		fact = fact + 2;*/
+
+		ans = ans + term;
+		term = -term*x*x / ((fact + 1)*(fact + 2));
 		fact = fact + 2;
+
 	}
 
 	return ans;
